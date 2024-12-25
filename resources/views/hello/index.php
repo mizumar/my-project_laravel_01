@@ -23,6 +23,8 @@
 <body>
     <h1>Index2</h1>
     <p><?php echo $msg; ?></p>
+    <!-- リスト3-7 -->
+    <p><b>リスト3-7</b> ID = <?php echo $id ?></p>
     <p><?php echo date("Y年n月j日"); ?></p>
 </body>
 

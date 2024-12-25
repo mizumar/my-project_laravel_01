@@ -14,11 +14,12 @@ Route::get('/', function () {
 //     return view('hello.index');
 // });
 
-Route::get('hello', [HelloController::class, 'index']);
+//リスト3-9
+Route::get('hello/{id?}', [HelloController::class, 'index']);
 
 // Route::get('hello', HelloController::class);
 
-Route::get('hello/other', [HelloController::class, 'other']);
+//Route::get('hello/other', [HelloController::class, 'other']);
 
 /*
 Route::get('hello/{id?}/{pass?}', function ($id = '555', $pass = 'password') {
