@@ -23,8 +23,9 @@
 <body>
     <h1>Index2</h1>
     <p><?php echo $msg; ?></p>
-    <!-- リスト3-7 -->
-    <p><b>リスト3-7</b> ID = <?php echo $id ?></p>
+    <!-- リスト3-10 -->
+    <p><b>リスト3-10</b> ID = <?php echo $id ?></p>
+    <p>http://127.0.0.1:8001/hello?id=?????</p>
     <p><?php echo date("Y年n月j日"); ?></p>
 </body>
 

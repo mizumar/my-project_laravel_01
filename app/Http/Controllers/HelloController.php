@@ -26,12 +26,12 @@ function tag($tag, $txt)
 class HelloController extends Controller
 {
 
-    // リスト 3-8
-    public function index($id = 'zero')
+    // リスト 3-10
+    public function index(Request $request)
     {
         $data = [
             'msg' => 'これはコントローラーから渡されたメッセージです。。。',
-            'id' => $id
+            'id' => $request->id
         ];
         return view('hello.index', $data);
     }
