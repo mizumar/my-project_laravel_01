@@ -14,8 +14,9 @@ Route::get('/', function () {
 //     return view('hello.index');
 // });
 
-//リスト3-10
+//リスト3-16
 Route::get('hello', [HelloController::class, 'index']);
+Route::post('hello', [HelloController::class, 'post']);
 
 // Route::get('hello', HelloController::class);
 
