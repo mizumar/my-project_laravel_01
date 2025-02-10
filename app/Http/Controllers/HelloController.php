@@ -13,10 +13,10 @@ function tag($tag, $txt)
 
 class HelloController extends Controller
 {
-    // リスト 3-18
+    // リスト 3-20
     public function index()
     {
-        return view('hello.index', ['msg' => '']);
+        return view('hello.index');
     }
 
     public function post(Request $request)
