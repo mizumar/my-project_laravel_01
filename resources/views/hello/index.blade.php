@@ -20,30 +20,22 @@
     </style>
 </head>
 <body>
-    <h1>Blede/Index</h1>
-    <p>&#064; foreachディレクタブルの例</p>
+    @extends('layouts.helloapp')
 
-    <ol>
-        @php
-            $counter = 0;
-        @endphp
-        @while ($counter < count($data))
-            <li>{{$data[$counter]}}</li>
-            @php
-                $counter++;
-            @endphp
-        @endwhile
-    </ol>
+    @section('title','index')
 
-    @isset($msg)
-    <p>こんにちは、{{$msg}}さん。</p>
-    @else
-    <p>何か書いてください。</p>
-    @endisset
-    <form method="POST" action="/hello">
-        @csrf
-        <input type="text" name="msg">
-        <input type="submit">
-    </form>
+    @section('menubar')
+        @parent
+        インデックスページ
+    @endsection
+
+    @section('content')
+        <p>ここが本文のコンテンツです。</p>
+        <p>必要なだけ記述できます。</p>
+    @endsection
+
+    @section('footer')
+    copyright 2020 tuyano.
+    @endsection
 </body>
 </html>
