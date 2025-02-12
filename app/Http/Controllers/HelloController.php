@@ -22,6 +22,7 @@ class HelloController extends Controller
 
     public function post(Request $request)
     {
-        return view('hello.index', ['msg' => $request->msg]);
+        $data = ['one', 'two', 'three', 'four', 'five'];
+        return view('hello.index', ['msg' => $request->msg], ['data' => $data]);
     }
 }
