@@ -23,17 +23,15 @@
     <h1>Blede/Index</h1>
     <p>&#064; foreachディレクタブルの例</p>
 
-    <ol>
-        @for ($i = 1; $i < 100; $i++)
-            @if ($i % 2 == 1)
-                @continue
-            @elseif ($i <= 10)
-                <li>No, {{$i}}</li>
-            @else
-                @break
-            @endif
-        @endfor
-    </ol>
+    @foreach ($data as $item)
+        @if ($loop->first)
+            <p>データ一覧</p><ul>
+        @endif
+        <li>No,{{$loop->iteration}}. {{$item}}</li>
+        @if ($loop->last)
+            </ul><p>--ここまで</p>
+        @endif
+    @endforeach
 
     @isset($msg)
     <p>こんにちは、{{$msg}}さん。</p>
