@@ -21,6 +21,15 @@
 </head>
 <body>
     <h1>Blede/Index</h1>
+    <p>&#064; foreachディレクタブルの例</p>
+
+    <ol>
+        @foreach ($data as $item)
+        <li>{{$item}}</li>
+
+        @endforeach
+    </ol>
+
     @isset($msg)
     <p>こんにちは、{{$msg}}さん。</p>
     @else
