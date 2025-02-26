@@ -34,6 +34,8 @@
         <ul>
             @each('components.item', $data, 'item')
         </ul>
+        <p>Controller value<br>'message' = {{ $message ?? 'Default message' }}</p>
+        <p>ViewComposer value<br>'viewmessage' = {{$view_message}}</p>
     @endsection
 
     @section('footer')
