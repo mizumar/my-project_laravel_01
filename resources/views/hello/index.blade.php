@@ -31,11 +31,8 @@
 
     @section('content')
         <p>ここが本文のコンテンツです。</p>
-        <table>
-            @foreach ($data as $item)
-                <tr><th>{{$item['name']}}</th><td>{{$item['mail']}}</td></tr>
-            @endforeach
-        </table>
+        <p>これは、<middeware>google.com</middeware>へのリンクです。</p>
+        <p>これは、<middeware>yahoo.com</middeware>へのリンクです。</p>
         <p>Controller value<br>'message' = {{ $message ?? 'Default message' }}</p>
         <p>ViewComposer value<br>'viewmessage' = {{$view_message}}</p>
     @endsection
