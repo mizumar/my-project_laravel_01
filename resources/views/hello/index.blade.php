@@ -31,9 +31,11 @@
 
     @section('content')
         <p>ここが本文のコンテンツです。</p>
-        <ul>
-            @each('components.item', $data, 'item')
-        </ul>
+        <table>
+            @foreach ($data as $item)
+                <tr><th>{{$item['name']}}</th><td>{{$item['mail']}}</td></tr>
+            @endforeach
+        </table>
         <p>Controller value<br>'message' = {{ $message ?? 'Default message' }}</p>
         <p>ViewComposer value<br>'viewmessage' = {{$view_message}}</p>
     @endsection

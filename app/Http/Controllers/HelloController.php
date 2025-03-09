@@ -14,17 +14,9 @@ function tag($tag, $txt)
 class HelloController extends Controller
 {
     // リスト 3-22
-    public function index()
+    public function index(Request $request)
     {
-        $data = [
-            ['name' => '山田太郎', 'mail' => 'taro@yamada'],
-            ['name' => '田中花子', 'mail' => 'hanako@tanaka'],
-            ['name' => '鈴木さちこ', 'mail' => 'sathiko@suzuki']
-        ];
-        return view('hello.index', [
-            'data' => $data,
-            'message' => 'Hello from Controller!'
-        ]);
+        return view('hello.index', ['data' => $request->data]);
     }
 
     public function post(Request $request)
