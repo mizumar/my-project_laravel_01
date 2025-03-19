@@ -31,8 +31,8 @@
 
     @section('content')
         <p>ここが本文のコンテンツです。</p>
-        <p>これは、<middeware>google.com</middeware>へのリンクです。</p>
-        <p>これは、<middeware>yahoo.com</middeware>へのリンクです。</p>
+        <p>これは、<middleware>google.com</middleware>へのリンクです。</p>
+        <p>これは、<middleware>yahoo.com</middleware>へのリンクです。</p>
         <p>Controller value<br>'message' = {{ $message ?? 'Default message' }}</p>
         <p>ViewComposer value<br>'viewmessage' = {{$view_message}}</p>
     @endsection

@@ -138,6 +138,7 @@ return [
         Illuminate\Hashing\HashServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Illuminate\Log\LogServiceProvider::class,
 
         /*
          * Application Service Providers...

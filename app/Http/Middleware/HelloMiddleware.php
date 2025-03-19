@@ -13,16 +13,23 @@ class HelloMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
         $response = $next($request);
+
+        if (!is_object($response)) {
+            return $response;
+        }
+
         $content = $response->getContent();
 
-        $patten = '/<middeware>(.*)<\/middeware>/i';
-        $replace = '<a href="http://$1">$1</a>';
-        $content = preg_replace($patten, $replace, $content);
+        if (is_string($content)) {
+            $pattern = '/<middleware>(.*)<\/middleware>/i';
+            $replace = '<a href="http://$1">$1</a>';
+            $content = preg_replace($pattern, $replace, $content);
+            $response->setContent($content);
+        }
 
-        $response->setContent($content);
         return $response;
     }
 }
